@@ -1,13 +1,31 @@
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import cssButton from './Button.module.scss';
+import BallTriangle from '../../assets/BallTriangle';
+interface MyButton
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  isLoading?: boolean;
+}
 
-const Button = (props) => {
-  const { children = 'Button', color = 'purple', fontColor = 'white' } = props;
+const Button = (props: MyButton) => {
+  const {
+    children = 'Button',
+    color = 'purple',
+    isLoading = false,
+    ...rest
+  } = props;
 
   return (
-    <button
-      className={cssButton.button}
-      {...props}
-    >
+    <button className={cssButton.button} {...rest}>
+      {isLoading && (
+        <BallTriangle
+          color="red"
+          size={15}
+          style={{ marginRight: 10, overflow: 'hidden' }}
+        />
+      )}
       {children}
     </button>
   );
