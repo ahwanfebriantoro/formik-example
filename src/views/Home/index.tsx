@@ -6,14 +6,13 @@ import Menu from '../../components/Menu';
 
 const MyHome = () => {
   return (
-    <Background color="purple">
+    <Background color="aliceblue">
       <Card>
         <h1>Hi I'm home, where is your home?</h1>
         <Input />
         <Input />
         <Button>Add</Button>
       </Card>
-      <Menu />
     </Background>
   );
 };

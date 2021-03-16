@@ -22,7 +22,7 @@ const LoginForm = () => {
         password: ''
       }}
       validationSchema={LoginSchema}
-      onSubmit={(values) => post(values).then((res) => console.log(res))}
+      onSubmit={(values) => post(values)}
     >
       {({ handleSubmit, values, handleChange, isSubmitting }) => {
         return (
