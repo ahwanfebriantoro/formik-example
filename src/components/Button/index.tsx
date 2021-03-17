@@ -14,6 +14,7 @@ const Button = (props: MyButton) => {
     children = 'Button',
     color = 'purple',
     isLoading = false,
+    type = 'button',
     ...rest
   } = props;
 

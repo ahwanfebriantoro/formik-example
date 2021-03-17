@@ -4,8 +4,9 @@ import Button from '../Button';
 const menu = [
   { label: 'Home', href: '/' },
   { label: 'Login', href: '/login' },
-  { label: 'Traditional Form', href: '/traditional-form' },
-  { label: 'Complex Form', href: '/complex-form' }
+  { label: 'Login Without Formik', href: '/login-no-formik' },
+  // { label: 'Traditional Form', href: '/traditional-form' },
+  // { label: 'Complex Form', href: '/complex-form' }
 ];
 
 const Menu = () => {

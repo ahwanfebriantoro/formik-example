@@ -7,8 +7,9 @@ const Input = (
     HTMLInputElement
   >
 ) => {
+  const { placeholder = 'Input something', ...rest } = props;
   return (
-    <input className={cssInput.input} placeholder="placeholder" {...props} />
+    <input className={cssInput.input} placeholder={placeholder} {...rest} />
   );
 };
 
